@@ -1,3 +1,4 @@
 # Flask-MongoDb-RESTful
 
-# pip3 install -r requirements.txt
+Install resource:
+### pip3 install -r requirements.txt

@@ -1,0 +1,21 @@
+version: '1.0'
+services:
+  Todo:
+    container_name: Todo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+    cpu_shares: 512
+    mem_limit: 3G
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100M"
+        max-file: "3"
+    ports:
+      - "8080:8080"
+    command: python3 manager.py
+    environment:
+      NODE_ENV: 'production'
+networks:
